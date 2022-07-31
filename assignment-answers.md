@@ -7,10 +7,10 @@ LSTM is a type of recurrent neural network, whereas Prophet is an additive model
 |Term|Description|
 |----|-----------|
 |$y_t$|Current period value.|
-|$g(t)|Trend.|
-|$s(t)|Seasonality.|
-|$h(t)|Holidays.|
-|$\epsilon_t|Error term with mean equal to zero and an unknown variance.|
+|$g(t)$|Trend.|
+|$s(t)$|Seasonality.|
+|$h(t)$|Holidays.|
+|$\epsilon_t$|Error term with mean equal to zero and an unknown variance.|
 
 ### Why does an LSTM have poor performance against ARIMA and Prophet for Time Series
 
@@ -28,9 +28,9 @@ Exponential smoothing is used in time series, because it is simpler to estimate 
 
 A stationary time series is one in which the observations are only dependent on the lag values, not on the time period. For example, if a time series has a trend, then the values depend on the time period, $t$.  Other examples, would be changes in variance of the error term over time, or parameter instability of ARMA terms.
 
-Seasonality is changes in the time series that are regular and (roughly) predictable, such as an increase in sun screen sales in the summer.
+Seasonality refers to changes in the time series that are regular and (roughly) predictable, such as an increase in sun screen sales in the summer.
 
-Most, if not all, time series estimation and forecasting methods require the data to be stationary to be valid.
+Many time series estimation and forecasting methods require the data to be stationary to be valid.
 
 ### How is seasonality different from cyclicality? Fill in the blanks:
 
