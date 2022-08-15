@@ -11,8 +11,6 @@ from fastapi import FastAPI, Query, HTTPException
 from pydantic import BaseModel
 from model import predict, convert
 
-app = FastAPI()
-
 # pydantic models
 class StockIn(BaseModel):
     ticker: str
@@ -29,7 +27,8 @@ def get_prediction(payload: StockIn):
     prediction_list = predict(ticker, days)
 
     if not prediction_list:
-        raise HTTPException(status_code=400, detail="Model not found.")
+        raise HTTPException(status_code=400, detail=ticker+str(days))
+        #raise HTTPException(status_code=400, detail="Model not found.")
 
     response_object = {
         "ticker": ticker, 
